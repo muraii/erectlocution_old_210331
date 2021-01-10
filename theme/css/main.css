@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Serif&family=IM+Fell+DW+Pica:ital@0;1&family=Libre+Baskerville&family=Space+Mono&family=Syne+Mono&display=swap');
+
+body {
+  max-width: 1200px;
+  width: 100%;
+  margin: 2em auto;
+}
+
+.front-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 20%;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  width: 50%;
+  margin: auto;
+  /*padding-left: 15%;*/
+}
+
+.post-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  /*width: 65%;*/
+  width: 50%;
+  margin: auto;
+}
+
+h1.blog-header {
+  font-family: Anton, sans-serif;
+  grid-area: "header";
+  color: #eee;
+  font-size: 4em;
+  text-shadow: 2px 2px 0px #303 /*, -2px -2px 0px #fff*/;
+}
+
+.blog-post {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "post-title"
+    "post-date"
+    "post-main";
+  /*justify-self: center;*/
+}
+
+ul {
+  list-style-type: none;
+  grid-area: "main";
+  /*justify-self: center;*/
+  padding-left: 0;
+}
+
+li {
+  padding: 0.5em 0;
+}
+
+a.index-link,
+a.index-link:visited {
+  color: #303;
+  text-decoration: none;
+  font-family: Helvetica, Anton, "Syne Mono", monospace;
+  font-size: 1.25em;
+  text-transform: lowercase;
+  padding: 5px 0px;
+}
+
+a.index-link:hover {
+  color: #ccc;
+  padding: 5px 0;
+  background: #303;
+}
+
+time.post-date {
+  margin: 0 2.5em 0 0;
+  font-family: "Syne Mono", "Space Mono", monospace;
+  color: #ccc;
+  grid-area: "post-date";
+}
+
+/* Post Stuff */
+.blog-post-title {
+  grid-area: "post-title";
+  color: #303;
+  font-family: Helvetica, Anton, "Syne Mono", monospace;
+  font-size: 1.5em;
+  text-transform: lowercase;
+  padding: 0px;
+  margin-left: 0px;
+}
+
+.blog-post p {
+  font-family: "IBM Plex Serif", "Libre Baskerville", Helvetica;
+  line-height: 1.75em;
+  font-size: 1.25em;
+}
+
+/* Footer Stuff */
+.footer {
+  background: #333;
+  grid-area: "footer";
+  padding: 2em;
+  width: 50%;
+  justify-self: center;
+}
